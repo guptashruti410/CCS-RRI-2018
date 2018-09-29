@@ -37,6 +37,7 @@
                     \usepackage{booktabs}
                     \usepackage{subfig}
                     \captionsetup{aboveskip=14pt,}
+                    \captionsetup[table]{singlelinecheck = false}
                     
                     %Coloured Boxes
                     \usepackage{xcolor}
@@ -47,7 +48,7 @@
                     
                     %Defining Colours
              \definecolor{CCSbrown}{RGB}{163, 86, 37}
-               \definecolor{CCSgrey}{RGB}{167, 169, 172}
+               \definecolor{CCSgrey}{RGB}{105, 105, 105}
                  \definecolor{CCSblack}{RGB}{64, 64, 65} 
              
              
@@ -64,7 +65,17 @@
 		
 		\usepackage[authordate, backend=biber]{biblatex-chicago}
 		\addbibresource{ewaste_v2.bib}
+		\usepackage{hyperref} 
+		\hypersetup{
+		colorlinks,
+		linkcolor = black,
+		citecolor = blue}
+		\usepackage{blindtext}
 		
+              %Tables 
+              \usepackage{array}
+              \usepackage{makecell}		
+              
                     \begin{document}
                     
     %==================================================                
@@ -103,9 +114,9 @@
          
         \section*{List of Abbreviations}
         \addcontentsline{toc}{section}{List of Abbreviations}
-        
         %\chaptermark{List of Abbreviations}
-         
+       
+        
         \begin{abbrv}
          
         \item[CPCB]			Central Pollution Control Board
@@ -148,15 +159,15 @@
                     
                     However, this envisioned EPR model does not match the actual flow of e-waste in India. Interviews with authorised recyclers in India showed that many of the 178 authorised recycling firms registered with the Central Pollution Control Board (CPCB) in 2016 are currently performing under-capacity or running at a loss while the informal sector controls a significant portion of the e-waste market. Our survey revealed that this is because informal recyclers quote at least double the prices offered by the authorised recyclers for buying e-waste. Through this study, we attempt to understand the factors that hinder the authorised recycling sector from competing with the informal sector. \\
 
-                    The first section of the paper examines the EPR model in India and the changes brought forth by the EWM Rules, 2016, to check the leakages to the informal sector. These adjustments include the introduction of mandatory collection targets and collection mechanisms other than take-back schemes and collection centres. \\
+                    The \hyperref[sec:1]{first section} of the paper examines the EPR model in India and the changes brought forth by the EWM Rules, 2016, to check the leakages to the informal sector. These adjustments include the introduction of mandatory collection targets and collection mechanisms other than take-back schemes and collection centres. \\
                     
-                   The second section compares the intended flow of e-waste with its actual movement and claims that despite revising the 2011 Rules, authorised recyclers are unable to thrive in comparison to informal recyclers. Our survey of six recycling firms in Faridabad, Rohtak, Manesar and Hapur showed that these authorised recyclers were operating at 39.9\% of their total capacity to recycle e-waste. \\
+                   The \hyperref[sec:2]{second section} compares the intended flow of e-waste with its actual movement and claims that despite revising the 2011 Rules, authorised recyclers are unable to thrive in comparison to informal recyclers. Our survey of six recycling firms in Faridabad, Rohtak, Manesar and Hapur showed that these authorised recyclers were operating at 39.9\% of their total capacity to recycle e-waste. \\
                    
-                   The third section explores the possible reasons for this dissonance and the failure of the current EPR model. We argue that the current model fails to accommodate the higher prices offered by the informal recycler to buy e-waste. For instance, an HP laptop sells for Rs. 4,642.9 in the informal sector compared to Rs. 1,133.3 in the authorised.\\
+                   The \hyperref[sec:3]{third section} explores the possible reasons for this dissonance and the failure of the current EPR model. We argue that the current model fails to accommodate the higher prices offered by the informal recycler to buy e-waste. For instance, an HP laptop sells for Rs. 4,642.9 in the informal sector compared to Rs. 1,133.3 in the authorised.\\
                    
                    We hypothesise that the price difference between authorised and informal recyclers is the result of the latter’s operational efficiency \parencite{chintanreport}. Using this as a base, we study the operating costs for both authorised and informal recyclers. These include the licences required to enter the authorised recycling market, compliance with government regulations, secure disposal of hazardous residue, and secondary markets for refurbished goods. These costs could keep authorised recyclers from quoting prices similar to those of informal recyclers who operate without the necessary licences. For instance, the average official time taken to obtain Consent to Establish and Consent to Operate from the Haryana and Uttar Pradesh State Pollution Control Boards (SPCBs) for recycling e-waste is 1.3 months. According to our survey, the actual time taken to acquire these licences ranges from less than 1 month to 24 months. Therefore, the actual time taken to obtain licences could serve as a transaction cost for authorised recyclers.\\
                     
-                    The last section lays out a proposal for a revitalised EPR model that tackles the price difference between authorised and informal recyclers in India. Our model suggests three modifications to the existing EPR system in the form of a mandatory Deposit Refund Scheme (DRS), a Common Deposit Account, and third-party audits.\\
+                    The \hyperref[sec:4]{last section} lays out a proposal for a revitalised EPR model that tackles the price difference between authorised and informal recyclers in India. Our model suggests three modifications to the existing EPR system in the form of a mandatory Deposit Refund Scheme (DRS), a Common Deposit Account, and third-party audits.\\
                     
                      First, the mandatory DRS incentivises the consumers to return their devices to the producers and not the \textit{kabadiwala}.\footnote{A \textit{kabadiwala} is a small-scale scrap collector who regularly purchases unwanted items such as newspapers, mobile phones and old television sets, from households.} DRSs have been shown to increase recycling rates. After the implementation of a mandatory DRS, the recycling rate for lead-acid batteries in the USA rose from 86\% to 97\% \parencite{wallspaper}. Second, the Common Deposit Account enhances the efficiency of our model. It collects all the Deposit Refund fees into a common account, which allows the consumers to return their devices to any producer. Finally, the third-party audits check e-waste from moving to the informal sector.\\
                     
@@ -182,7 +193,7 @@
                     In this paper, we look at the current design of EPR in India, examine its shortcomings and propose improvements to cover its limitations. Our study is based on interviews with authorised and informal recyclers operating in the National Capital Region (NCR) of India. \\ 
                     
                     %Extended Producer Responsibility for E-Waste in India
-                    \section{Extended Producer Responsibility for E-Waste in India}
+                    \section{Extended Producer Responsibility for E-Waste in India}\label{sec:1}
                     
                     On 8 April 2010, a man was exposed to Cobalt 60 while attempting to dismantle radioactive pipes in Mayapuri—one of the informal e-recycling hubs in Delhi. He died 19 days later due to the adverse effects of the radiation. There were several other victims of the same \parencite{bhadurinews}. The outcry that followed pushed the government into passing the EWM Rules in 2011. \\
                     
@@ -190,7 +201,7 @@
                     
                     The informal sector predominantly handled the supply of e-waste \parencite{thakurnews}. The consumer would sell EEE products to their local \textit{kabadiwala}. The \textit{kabadiwala} then resold the collected waste to the local scrap dealers. The scrap dealers sorted the waste and sold it to the informal dismantlers, refurbishers and recyclers. \\
                     
-                    The EWM Rules, 2011, defined electronic waste or e-waste as ‘electrical and electronic equipment that has been discarded in whole or in part by individual and bulk consumers and during manufacturing, refurbishment and repairing processes’ and introduced the concept of EPR. \\
+                    The EWM Rules, 2011, defined electronic waste or e-waste as ‘electrical and electronic equipment that has been discarded in whole or in part by individual and bulk consumers and during manufacturing, refurbishment and repairing processes’ and introduced the concept of EPR. 
                     
                     \subsection{Concept of Extended Producer Responsibility}
                     
@@ -198,7 +209,7 @@
                     
                     When EPR is implemented in a sector, the producer’s responsibility is extended from the product’s manufacturing and consumption to its treatment at the end of its life \parencite{toxicspaper}. For example, consider the implementation of EPR in the bottled water sector. In a world without EPR, a company selling bottled water in polyethylene terephthalate (PET) bottles would only be responsible for the quality of the bottle and the water within. Despite the pollution risk posed by the PET bottle, neither the company nor the consumer would be liable for its safe disposal. With EPR, the company would be responsible not only for the water and its packaging but also for ensuring the secure disposal of the PET bottles after usage. \\
                     
-                    In traditional waste management models, consumers bear the burden of ensuring proper waste disposal. The local administration taxes consumers, and the revenue generated is used to run a waste management system. Since producers have no incentive to reduce the negative environmental externalities caused by their products, there is no change in the volume of e-waste generated, toxicity or the safe disposal of EEE components. EPR changes the incentive structure and holds the producers responsible for the inflicted environmental harm \parencite{bhaskarturagapaperb}. \\
+                    In traditional waste management models, consumers bear the burden of ensuring proper waste disposal. The local administration taxes consumers, and the revenue generated is used to run a waste management system. Since producers have no incentive to reduce the negative environmental externalities caused by their products, there is no change in the volume of e-waste generated, toxicity or the safe disposal of EEE components. EPR changes the incentive structure and holds the producers responsible for the inflicted environmental harm \parencite{bhaskarturagapaperb}. 
                     
                     \subsection{Current Design of Extended Producer Responsibility for E-Waste in India}
                     
@@ -206,31 +217,31 @@
                     
                     However, the rules failed to achieve the anticipated results. While registered recycling capacities increased, authorised recyclers still received only 5\% to 15\% of the total supply of e-waste \parencite{bhaskarturagapapera}. Instead of encouraging the development of better collection and recycling infrastructure, the EWM Rules, 2011, ended up compelling the producers to implement a few inexpensive aspects of EPR \parencite{bhaskarturagapapera}. \\
                     
-                    The EWM Rules, 2016, were implemented to fix these shortcomings.\footnote{ After issuing the EWM Rules, 2011, the GoI released the EWM Rules, 2016. This set of Rules was amended in March 2018 and came to be known as the EWM Amendment Rules, 2018.} Three major changes that came under the new rules were modifications to the EPR Authorisation process, addition of various collection mechanisms for the producers to comply with EPR, and institution of mandatory collection targets. If the producers defaulted on any of these counts, they could be charged financial penalties approved by the CPCB under the Environmental Protection Act, 1986.\footnote{See Rule 21 (2) of the EWM Amendment Rules, 2018.} \\
+                    The EWM Rules, 2016, were implemented to fix these shortcomings.\footnote{After issuing the EWM Rules, 2011, the GoI released the EWM Rules, 2016. This set of Rules was amended in March 2018 and came to be known as the EWM Amendment Rules, 2018.} Three major changes that came under the new rules were modifications to the EPR Authorisation process, addition of various collection mechanisms for the producers to comply with EPR, and institution of mandatory collection targets. If the producers defaulted on any of these counts, they could be charged financial penalties approved by the CPCB under the Environmental Protection Act, 1986.\footnote{See Rule 21 (2) of the EWM Amendment Rules, 2018.}
                     
                     \subsubsection{Extended Producer Responsibility Authorisation}
                     
-                    Granted by CPCB under the EWM Rules, 2016, EPR Authorisation ensures that producers can be held accountable for channelling their e-waste to authorised recyclers. The authorisation requires a detailed EPR Plan outlining the mechanism chosen by producers for EPR implementation and agreements with authorised dismantlers and recyclers. It also helps the government maintain a record of all the firms processing e-waste in the country. As per Rule 13 (1) (iv) of the EWM Rules, 2016, if the producers’ applications for EPR Authorisation fail, their operations will be stopped until they are duly authorised to exercise EPR. \\
+                    Granted by the CPCB under the EWM Rules, 2016, EPR Authorisation ensures that producers can be held accountable for channelling their e-waste to authorised recyclers. The authorisation requires a detailed EPR Plan outlining the mechanism chosen by producers for EPR implementation and agreements with authorised dismantlers and recyclers. It also helps the government maintain a record of all the firms processing e-waste in the country. As per Rule 13 (1) (iv) of the EWM Rules, 2016, if the producers’ applications for EPR Authorisation fail, their operations will be stopped until they are duly authorised to exercise EPR. 
                                          
                     \subsubsection{Collection Mechanisms}
                     
                     EWM Rules, 2011, had failed to mention any specific method apart from setting up collection centres and instituting take-back arrangements for implementing EPR. This ambiguity contributed to the difficulty of its execution \parencite{pibreport}. For example, a study undertaken in 2015 showed that almost 35\% of the major EEE (both international and domestic) producers in India had either taken zero or limited action to implement EPR. Another 29\% had attempted to set up mechanisms but failed to achieve positive results. Most of these producers neither established take-back systems nor conveyed information about e-waste to their consumers, as directed in the EWM Rules, 2011 \parencite{toxicsreportb}. \\
                     
-                    Therefore, to make it easier for the producers to implement their EPR, EWM Rules, 2016, offered new instruments for channelising the e-waste towards authorised recycling and disposal. These included the DRS and Producer Responsibility Organisations (PROs). \\
+                    Therefore, to make it easier for the producers to implement their EPR, EWM Rules, 2016, offered new instruments for channelising the e-waste towards authorised recycling and disposal. These included the DRS and Producer Responsibility Organisations (PROs).
                     
-                    \paragraph{Collection Centres}
+                    \paragraph{Collection Centres} 
                     
-                    According to the EWM Rules, 2011, collection centres—points or centres set up to gather e-waste—had to acquire authorisation from the State Pollution Control Boards (SPCBs) to operate. The EWM Rules, 2016, removed the need for this authorisation to allow flexibility for the producers while executing their EPR (PIB 2016). They could now be set up by an individual producer or an association, PROs, dismantlers or recyclers in order to channel waste to the authorised recyclers \parencite{pibreport}. \\
+                    According to the EWM Rules, 2011, collection centres—points or centres set up to gather e-waste—had to acquire authorisation from the State Pollution Control Boards (SPCBs) to operate. The EWM Rules, 2016, removed the need for this authorisation to allow flexibility for the producers while executing their EPR (PIB 2016). They could now be set up by an individual producer or an association, PROs, dismantlers or recyclers in order to channel waste to the authorised recyclers \parencite{pibreport}. 
                     
                     \paragraph{Deposit Refund Scheme}
                     
-                    Under the EWM Rules, 2016, producers who implement a DRS charge an additional amount as a deposit at the time of sale of EEE. Consumers receive this amount (along with the appropriate interest) only when they deposit the EEE at the end of its life with producers. In this manner, the deposit incentivises consumers to return used products to producers. \\
+                    Under the EWM Rules, 2016, producers who implement a DRS charge an additional amount as a deposit at the time of sale of EEE. Consumers receive this amount (along with the appropriate interest) only when they deposit the EEE at the end of its life with producers. In this manner, the deposit incentivises consumers to return used products to producers. 
                     
                     \paragraph{Producer Responsibility Organisation}
                     
                     PROs serve as a means for producers to outsource their EPR implementation to meet collection targets. PROs aid producers by setting up and running collection centres and spreading awareness about e-waste to consumers. They can also enact mechanisms such as a take-back or a DRS \parencite{cpcbproreport}. \\
                     
-                    The EWM Rules, 2016, recognise the PROs as an important stakeholder in the e-waste market in India. Given their steadily growing presence, PROs are now required to register with the CPCB as per Rule 13 (1) (xvii) of the EWM Amendment Rules, 2018. Upon failure to do so, the PROs would face penalisation under the Environmental Protection Act, 1986.\footnote{See Guideline 11 in Guidelines for Producer Responsibility Organization (PRO), CPCB.} \\
+                    The EWM Rules, 2016, recognise the PROs as an important stakeholder in the e-waste market in India. Given their steadily growing presence, PROs are now required to register with the CPCB as per Rule 13 (1) (xvii) of the EWM Amendment Rules, 2018. Upon failure to do so, the PROs would face penalisation under the Environmental Protection Act, 1986.\footnote{See Guideline 11 in Guidelines for Producer Responsibility Organization (PRO), CPCB.} 
                     
                     \subsubsection{Mandatory Collection Targets}
                     
@@ -238,13 +249,13 @@
                     
                     However, in March 2018, the MoEFCC amended the EWM Rules, 2016, and reduced the collection targets. Producers were required to collect only 10\% of the e-waste generated in 2017 to 2018 with 10\% annual increments. After 2022, they would need to meet the EWM Rules target of 70\% waste generated.\footnote{See Schedule III of the EWM Amendment Rules, 2018.} This mandated rate is significantly higher than the collection rates in many developed countries, which plateau between 40\% and 50\%. Nonetheless, it should be noted that consumers in these countries bear the cost of recycling unlike in India, where recyclers pay them for e-waste \parencite{veitreport}. \\
                     
-                    The amendment also introduced separate EPR targets for newer producers.\footnote{ See Schedule III A of the EWM Amendment Rules, 2018.} As per Rule 13 (1) (xii) in the EWM Amendment Rules, 2018, these new producers were defined as those who had been operating in the market for a shorter period than their product’s average lifespan. Their EPR collection targets were based on the previous year’s sales figures and were lower than the targets for the older producers.\footnote{\textit{Ibid.}} \\                     
+                    The amendment also introduced separate EPR targets for newer producers.\footnote{See Schedule III A of the EWM Amendment Rules, 2018.} As per Rule 13 (1) (xii) in the EWM Amendment Rules, 2018, these new producers were defined as those who had been operating in the market for a shorter period than their product’s average lifespan. Their EPR collection targets were based on the previous year’s sales figures and were lower than the targets for the older producers.\footnote{\textit{Ibid.}}                      
                     
                     %Movement of E-Waste after Extended Producer Responsibility
                     
-                    \section{Movement of E-Waste after Extended Producer Responsibility}
+                    \section{Movement of E-Waste after Extended Producer Responsibility}\label{sec:2}
                     
-                    The EWM Rules, 2016, made important changes to the EPR model in order to divert the supply of e-waste to the authorised recyclers. However, the actual movement of e-waste continues to differ significantly from the intended direction, as the informal sector still handles more than 95\% of the domestically generated e-waste \parencite{assochamstats} while authorised recyclers are unable to engage a competitive portion of the market.\\ 
+                    The EWM Rules, 2016, made important changes to the EPR model in order to divert the supply of e-waste to the authorised recyclers. However, the actual movement of e-waste continues to differ significantly from the intended direction, as the informal sector still handles more than 95\% of the domestically generated e-waste \parencite{assochamstats} while authorised recyclers are unable to engage a competitive portion of the market.
                                   
                     \subsection{Intended Flow of E-Waste}
                     
@@ -261,7 +272,7 @@
                     %Figure 1
                     \begin{figure}[H]
                     	\centering
-                    	\includegraphics[height = 4.25in]{/Users/tarinisudhakar/Documents/Coding/CCS-RRI-2018-master/fig1.png}
+                    	\includegraphics[height = 4.3in]{/Users/tarinisudhakar/Documents/Coding/CCS-RRI-2018-master/fig1.png}
                     	\caption[Optional Caption]{EPR Model in India as per EWM Rules, 2016}
                     \end{figure}
                     
@@ -293,7 +304,7 @@
                     \end{figure}
                     
                     %Price Difference Between Authorised and Informal Recyclers
-                    \section{Price Difference Between Authorised and Informal Recyclers}
+                    \section{Price Difference Between Authorised and Informal Recyclers}\label{sec:3}
                     
                     To understand why consumers were routing e-waste to informal recyclers, we visited some of the e-waste hubs of Delhi—namely, Seelampur and Shastri Park.\\
                      
@@ -303,14 +314,14 @@
                                         
                     %figure 3
                     \begin{figure}[H]
-                    \centering
-                    \includegraphics[height= 3.65in]{/Users/tarinisudhakar/Documents/Coding/CCS-RRI-2018-master/fig3.png}
+                    \flushleft
+                    \includegraphics[height= 4.20in]{/Users/tarinisudhakar/Documents/Coding/CCS-RRI-2018-master/fig3.png}
                     \caption[Optional Caption]{Visualisation of Price Difference Between Authorised and Informal Recyclers}
                     \end{figure}
                     
                     \subsection{Understanding the Operational Efficiency}
                     
-                    Informal recyclers function with far lower operating costs than authorised recyclers in India do. These costs allow them to quote higher prices and capture a significant portion of the market \parencite{chintanreport}. In this section, we offer explanations accounting for the price difference between authorised and informal recyclers. \\
+                    Informal recyclers function with far lower operating costs than authorised recyclers in India do. These costs allow them to quote higher prices and capture a significant portion of the market \parencite{chintanreport}. In this section, we offer explanations accounting for the price difference between authorised and informal recyclers. 
                     
                     \subsubsection{Cost of Licences}
                     
@@ -318,13 +329,13 @@
                     
                     An authorised recycler needs to acquire the following registrations/licences to start processing e-waste:                  
                     \begin{enumerate}
-                      \item \textit{Consent to Establish}(CTE) from SPCB;
-                      \item \textit{Consent to Operate} (CTO) from SPCB;
-                      \item \textit{Certificate of Registration} from District Industries Centre (DIC);
-                      \item \textit{Proof of Installed Capacity} of plant and machinery from DIC;
-                      \item \textit{Environmental Clearance} from SPCB; 
-                      \item \textit{E-Waste Licence} under the EWM Rules, 2016 from SPCB;
-                      \item \textit{Hazardous Waste Licence} under the HOWM Rules, 2016 from SPCB.\footnote{For firms which handle waste that comes under Part C, Schedule III of the HWM Rules, 2016.} 
+                      \item \textit{Consent to Establish}(CTE) from the SPCB;
+                      \item \textit{Consent to Operate} (CTO) from the SPCB;
+                      \item \textit{Certificate of Registration} from the District Industries Centre (DIC);
+                      \item \textit{Proof of Installed Capacity} of plant and machinery from the DIC;
+                      \item \textit{Environmental Clearance} from the SPCB; 
+                      \item \textit{E-Waste Licence} under the EWM Rules, 2016 from the SPCB;
+                      \item \textit{Hazardous Waste Licence} under the HWM Rules, 2016 from the SPCB.\footnote{For firms which handle waste that comes under Part C, Schedule III of the HWM Rules, 2016.} 
                     \end{enumerate}
                     
                     As the Environmental Clearance (No. 5) was required for plants with a capacity greater than 25,000 MTA and only 2 of the 178 registered plants had this capacity, its cost has been omitted from our calculations \parencite{cpcbrecyclersreport}. The cost of registering with the DIC (No. 3 and No. 4) is also not included due to logistical restraints.\\
@@ -333,33 +344,33 @@
                     
                     As our study focuses on the NCR, we specifically looked at the costs imposed by UP and Haryana. We tried to capture the actual time taken to acquire the licences as it may have been a source of transaction costs. However, we were only able to survey six firms in the NCR. Therefore, we calculated the official time taken to grant licences in UP and Haryana. Table 1 records these costs. \\
           
-          %table2          
+          %table1         
         % Table generated by Excel2LaTeX from sheet 'Sheet1'
-        \begin{table}[htbp]
-          \centering
-          \caption{Official Cost of Acquiring CTE and CTO}
-            \begin{tabular}{llll}
-            \multicolumn{1}{p{5em}}{State} & \multicolumn{1}{p{5em}}{Licences} & \multicolumn{1}{p{12.585em}}{Cost in Rs. (For Investment Between 1 to 10 crores)} & \multicolumn{1}{p{7.165em}}{Official Time Taken (in days)} \\
-            \midrule
-            Uttar Pradesh  & CTE + CTO  & 1,17,000 & 40-60 \\
-            Haryana & CTE + CTO  & 3,84,000 & 20-40 \\
-            \end{tabular}%
-          \label{tab:addlabel}%
-        \end{table}%
+\begin{table}[htpb]
+\caption{Official Cost of Acquiring CTE and CTO}
+\begin{tabular}{ l  c  r  r }
+\thead{\normalsize{State}} & \thead{\normalsize{Licence}} & \thead{\normalsize{Cost in Rs.}\\ \footnotesize\textit{(For Investment Between 1 and 10 crores)}} & \thead{\normalsize{Official Time Taken}\\ \footnotesize\textit{(in days)}} \\
+\hline
+Uttar Pradesh & CTE + CTO & 1,17,000 & 40-60\\ 
+
+Haryana & CTE + CTO & 3,84,000 & 20-40\\
+
+\end{tabular}
+\end{table}
                     
-                    The official costs for these licences range between Rs. 1 and 4 lakhs. The average official time taken to obtain them is 1.3 months. According to our survey, the actual time taken to acquire these licences ranged from less than 1 month to 24 months.\\
+                    The official costs for these licences range between Rs. 1 and 4 lakhs. The average official time taken to obtain them is 1.3 months. According to our survey, the actual time taken to acquire these licences ranged from less than 1 month to 24 months.
                     
                     \subsubsection{Cost of Regulatory Compliance}
                     
                     Authorised recyclers need to comply with other regulations that the informal sector does not need to. Auditing and physical inspections are part of the scrutinisation process. These provisions place a check on the e-waste handled by producers and recyclers and impose an additional cost on them. Informal recyclers do not incur these costs nor do they pay the appropriate taxes levied on authorised recyclers. \\
                     
-                    There are also costs associated with adhering to labour regulations. An authorised recycler needs to implement specific occupational and safety measures before starting operations (see Appendix 3). However, informal recyclers often work with the bare minimum gear and do not comply with these rules. They also do not abide by child labour laws as over 4.5 lakhs children are allegedly employed by the informal sector \parencite{assochamchild}.\\
+                    There are also costs associated with adhering to labour regulations. An authorised recycler needs to implement specific occupational and safety measures before starting operations (see Appendix 3). However, informal recyclers often work with the bare minimum gear and do not comply with these rules. They also do not abide by child labour laws as over 4.5 lakhs children are allegedly employed by the informal sector \parencite{assochamchild}.
                     
                     \subsubsection{Cost of Disposing Hazardous Residue }
                     
                     Authorised recyclers incur additional costs when they attempt to meet the standards set by government regulations. However, even if these regulatory costs were lifted, authorised recyclers would still have to pay for safely disposing of the hazardous residue.\\
                      
-                     The regulations in place to oversee the secure disposal of toxic components require authorised recyclers to send their processual residue to authorised TSDFs.\footnote{See Rule 11 (7) of the EWM Rules, 2016.} Informal recyclers circumvent this obligation and avoid the cost of treating their toxic waste in TSDFs by dumping it in the open.\\
+                     The regulations in place to oversee the secure disposal of toxic components require authorised recyclers to send their processual residue to authorised TSDFs.\footnote{See Rule 11 (7) of the EWM Rules, 2016.} Informal recyclers circumvent this obligation and avoid the cost of treating their toxic waste in TSDFs by dumping it in the open.
                     
                     \subsubsection{Access to Secondary Markets for Refurbished Goods}
                     
@@ -367,13 +378,13 @@
                     
                     Reselling refurbished goods is more profitable than merely selling recycled metal. Informal recyclers are at an advantage and can quote higher prices for the e-waste, as the authorised recyclers are often forbidden from reselling. The producer companies that employ authorised recyclers to handle their e-waste fear the creation of parallel competition for their new products \parencite{alevphd}. Our interviews with authorised recyclers revealed that some of their clients (producer companies) demanded that the recyclers photographed the shredded e-waste. This evidence ensured that the recyclers could not resell the waste EEE in the secondary markets.\\
                     
-                    Numerous factors, such as the ones mentioned above, contribute to the price gap between authorised and informal recyclers. This price gap incentivises consumers to sell e-waste to the informal sector and thus, negates the envisioned EPR model.\\
+                    Numerous factors, such as the ones mentioned above, contribute to the price gap between authorised and informal recyclers. This price gap incentivises consumers to sell e-waste to the informal sector and thus, negates the envisioned EPR model.
                     
                     %Revitalised EPR Model
                     
-                    \section{Revitalised Extended Producer Responsibility Model}
+                    \section{Revitalised Extended Producer Responsibility Model}\label{sec:4}
                     
-                    In order to seal off the e-waste leakages to the informal market and make the authorised sector more competitive, the EPR model needs to tackle the difference in prices that authorised and informal recyclers offer to buy e-waste. We suggest three modifications to the current system: a mandatory DRS, a Common Deposit Account, and third-party audits. The mandatory DRS secures the supply of e-waste to the authorised recyclers, and audits are required to prevent e-waste from leaking to the informal sector. The Common Deposit Account is an optional addition to improve the efficiency of the new model (see Figure 4). \\
+                    In order to seal off the e-waste leakages to the informal market and make the authorised sector more competitive, the EPR model needs to tackle the difference in prices that authorised and informal recyclers offer to buy e-waste. We suggest three modifications to the current system: a mandatory DRS, a Common Deposit Account, and third-party audits. The mandatory DRS secures the supply of e-waste to the authorised recyclers, and audits are required to prevent e-waste from leaking to the informal sector. The Common Deposit Account is an optional addition to improve the efficiency of the new model (see Figure 4). 
                     
                     \subsection{Mandatory Deposit Refund Scheme}
                     
@@ -385,17 +396,17 @@
                     
                     The government-mandated fee would also not entirely keep e-waste in the authorised sector. Producers would still have an incentive to sell the waste to the informal sector as opposed to authorised recyclers. Therefore, third-party audits should cross-validate the Deposit Refund fees withdrawn from the producers’ accounts to give the consumers against the e-waste sold to the authorised recyclers.\\ 
                     
-                    DRSs have been shown to improve recycling rates. For example, 44 states in the USA have implemented some variation of a mandatory DRS for lead-acid batteries. Retailers charge a \$10 deposit on batteries, which is refunded to consumers if they return used batteries within 30 to 45 days of purchase. After the introduction of the DRS, the recycling rate for lead-acid batteries rose from 86\% to 97\% \parencite{wallspaper}.\\
+                    DRSs have been shown to improve recycling rates. For example, 44 states in the USA have implemented some variation of a mandatory DRS for lead-acid batteries. Retailers charge a \$10 deposit on batteries, which is refunded to consumers if they return used batteries within 30 to 45 days of purchase. After the introduction of the DRS, the recycling rate for lead-acid batteries rose from 86\% to 97\% \parencite{wallspaper}.
                     
                     \subsection{Common Deposit Account}
                     
-                    If a DRS were implemented in either the current or the proposed model, consumers would be unable to avail of the Deposit Refund fee from a new producer who is different from the original producer. This is because the Deposit Refund fee, initially deposited with the original producer, would be inaccessible to the new producer.\\ 
+                    If a DRS were implemented in either the current or the proposed model, consumers would be unable to avail of the Deposit Refund fee from a new producer who is different from the original producer. This is because the Deposit Refund fee, initially deposited with the original producer, would be inaccessible to the new producer.\\
                     
                     A Common Deposit Account would solve this problem. If all the collected Deposit Refund fees were placed in an account accessible to all the producers, consumers would be able to receive their refund from any producer after depositing the end-of-life EEE.\\
                     
                     While there aren’t any large-scale applications of a Common Deposit Account for producers, countries have utilised common money funds to subsidise recycling. For instance, the Environmental Protection Administration of the Government of Taiwan manages a Recycling Fund Management Committee. Manufacturers and importers of EEE have to transfer funds into the Recycling Fund. These funds are used to provide subsidies for those participating in the collection and recycling of e-waste \parencite{chungchapter}.\\
                     
-                    Therefore, in our model, the government would need to set up the Common Deposit Account and supervise the collection of all Deposit Refund fees received by producers.\\
+                    Therefore, in our model, the government would need to set up the Common Deposit Account and supervise the collection of all Deposit Refund fees received by producers.
                     
                     \subsection{Third-Party Audits}
                     
@@ -409,13 +420,13 @@
                     %Figure 4
                     \begin{figure}[H]
                     	\centering
-                    	\includegraphics[height = 4.25in]{/Users/tarinisudhakar/Documents/Coding/CCS-RRI-2018-master/fig4.png}
+                    	\includegraphics[height = 4.7in]{/Users/tarinisudhakar/Documents/Coding/CCS-RRI-2018-master/fig4.png}
                     	\caption[Optional Caption]{The Revitalised EPR Model}
                     \end{figure}
                     
                     \subsection{Possible Repercussions}
                     
-                    The implementation of the proposed EPR model may also have certain unfavourable consequences. The changes in the demand for EEE would depend upon the price elasticity for particular goods. The Deposit fee could lead to an increase in smuggled devices, as the mandatory DRS would only be applicable in India and would raise the prices of domestic products. Each producer could also potentially lose consumers who will look for cheaper alternatives. \\
+                    The implementation of the proposed EPR model may also have certain unfavourable consequences. The changes in the demand for EEE would depend upon the price elasticity for particular goods. The Deposit fee could lead to an increase in smuggled devices, as the mandatory DRS would only be applicable in India and would raise the prices of domestic products. Each producer could also potentially lose consumers who will look for cheaper alternatives. 
                     
                     %Conclusion
                     
@@ -429,7 +440,7 @@
                     
                     Our proposed modifications to the existing EPR model would tackle this price gap in three ways. The mandatory Deposit fee equalling or higher than the informal sector’s prices would keep the consumers from selling their products to the \textit{kabadiwala} and the Common Deposit Account would make it convenient for consumers to return their devices to the producers. Third-party audits would cross-check the amount of e-waste transferred from the producers with the quantity processed by the authorised recyclers. This would help ensure that the hazardous residue is treated properly.\\
                     
-                    This is only a broad idea of how the EPR model can be reformed. Further research needs to be conducted to hammer out the execution. Aspects such as incentivising the reduction of hazardous substances in EEE and interest rate on the Deposit Refund fees have to be taken into account. Moreover, it is difficult to gather information on the different types of EEE and set the optimal quantum of fees that will direct e-waste to the authorised recyclers. Therefore, an alternate scenario where the market, instead of the government, can set the Deposit fee needs to be explored.\\ 
+                    This is only a broad idea of how the EPR model can be reformed. Further research needs to be conducted to hammer out the execution. Aspects such as incentivising the reduction of hazardous substances in EEE and interest rate on the Deposit Refund fees have to be taken into account. Moreover, it is difficult to gather information on the different types of EEE and set the optimal quantum of fees that will direct e-waste to the authorised recyclers. Therefore, an alternate scenario where the market, instead of the government, can set the Deposit fee needs to be explored.
          
 % Print Bibliography
 
@@ -439,72 +450,72 @@
         \newpage      
              \section*{Appendix 1: Capacity of Recycling Firms}
              \addcontentsline{toc}{section}{Appendix 1: Capacity of Recycling Firms }
-         % Table generated by Excel2LaTeX from sheet 'Sheet1'
-        \begin{table}[htbp]
-          \centering
-          \caption{Actual Working and Optimum Recycling Capacity of Surveyed Firms}
-            \begin{tabular}{lrr}
-            \multicolumn{1}{p{5em}}{Name of Recycling Firm} & \multicolumn{1}{p{5em}}{Optimum Capacity (in tonnes)} & \multicolumn{1}{p{7.915em}}{Capacity Utilised for 2017-18 (in tonnes)} \\
-            \midrule
-            SMS Enterprises, Pace City, Gurgaon & 360   & 8 \\
-            Namo E-Waste Management, Faridabad & 5,796  & 870 \\
-            Earth Waste Management, Rohtak & 600   & 400 \\
-            Greeniva Recycler, Hapur & 1,500  & 700 \\
-            Royal Faiz Recycling, Hapur  & 9,000  & 6,500 \\
-            Hind Recycling, Hapur & 9,000  & 2,000 \\
-            \midrule
-            Total & 26,256 & 10,478 \\
-            \end{tabular}%
-          \label{tab:addlabel}%
-        \end{table}%
+         
+\begin{table}[htpb]
+\raggedright
+\caption{Actual Working and Optimum Recycling Capacity of Surveyed Firms}
+\begin{tabular}{ l  r  r }
+\thead{\normalsize{Name of Recycling Firm}} & \thead{\normalsize{Optimum Capacity} \\ \footnotesize\textit{(in tonnes)}} & \thead{\normalsize{Capacity Utilised for 2017-18} \\ \footnotesize\textit{(in tonnes)}} \\
+\hline 
+Namo E-Waste Management, Faridabad & 5,796 & 870 \\
+SMS Enterprises, Pace City, Gurgaon & 360 & 8 \\
+Greeniva Recycler, Hapur & 1,500 & 700 \\
+Royal Faiz Recycling, Hapur & 9,000 & 6,500 \\
+Hind Recycling, Hapur & 9,000 & 2,000 \\
+Earth Waste Management, Rohtak & 600 & 400 \\
+\hline
+Total & 26,256 & 10,478  \\ 
+\end{tabular}
+\end{table}
         
         %Appendix2
         \newpage
-        \section*{Appendix 2: Price Comparison Between Authorised and Informal Recyclers}
-        \addcontentsline{toc}{section}{Appendix 2: Price Comparison Between Authorised and Informal Recyclers}
+        \section*{Appendix 2: Price Comparison Between Authorised \\ and Informal Recyclers}
+        \addcontentsline{toc}{section}{Appendix 2: Price Comparison Between Authorised \\ and Informal Recyclers}
         % Table generated by Excel2LaTeX from sheet 'Sheet1'
-                    \begin{table}[htbp]
-                      \centering
-                      \caption{Price Comparison between Authorised and Informal Recyclers}
-                        \begin{tabular}{lrr}
-                        Item  & \multicolumn{1}{p{8em}}{Informal Recycler \newline{}(Rs. per unit)} & \multicolumn{1}{p{8em}}{Authorised Recycler \newline{}(Rs. per unit)} \\
-                        \midrule
-                        Toshiba Hard Disk (500 GB/1 TB) & 221.3 & 28.6 \\
-                        CRT TV (Colour) & 325   & 127.5 \\
-                        LCD TV (32-40 inches) & 1642.9 & 403.3 \\
-                        LED TV (32-40 inches) & 2107.1 & 436.6 \\
-                        Air Conditioner (AC) (1.5 tonnes) & 2835.7 & 2058.3 \\
-                        Computer Monitor (15-17 inches) & 371.4 & 302.6 \\
-                        HP CPU (500 GB 16 GB RAM) & 2253.6 & 351.6 \\
-                        Samsung Mobile S6 & 1418.6 & 62.5 \\
-                        HP Laptop (i3/i5) & 4642.9 & 1133.3 \\
-                        Refrigerator (350 litres) & 3514.3 & 683.3 \\
-                        Printer (HP 1010) & 828.6 & 75.8 \\
-                        UPS/Stabiliser  & 324.3 & 112.5 \\
-                        Fax Machine  & 197.9 & 40 \\
-                        \end{tabular}%
-                      \label{tab:addlabel}%
-                    \end{table}%
-                         
+\begin{table}[htpb]
+\raggedright
+\caption{Price Comparison between Authorised and Informal Recyclers}
+\begin{tabular}{ l  r  r }
+\thead{\normalsize{Item}} & \thead{\normalsize{Authorised Recycler} \\ \footnotesize\textit{Rs. per unit}} & \thead{\normalsize{Informal Recycler} \\ \footnotesize\textit{Rs. per unit}} \\
+\hline
+
+HP Laptop (i3/i5) & 1,133.3 & 4,642.9\\
+Refrigerator (350 litres) & 683.3 & 3,514.3 \\
+Air Conditioner (AC) (1.5 tonnes) & 2,058.3 & 2,835.7 \\
+HP CPU (500 GB 16 GB RAM) & 351.6  & 2,253.6 \\
+LED TV (32-40 inches) & 436.6 & 2,107.1 \\
+LCD TV (32-40 inches) & 403.3 & 1,642.9 \\
+Samsung Mobile S6 & 62.5 & 1,418.6 \\
+Printer (HP 1010) & 75.8 & 828.6 \\
+Computer Monitor (15-17 inches) & 302.6 & 371.4\\
+CRT TV (Colour) & 127.5 & 325 \\
+UPS/Stabiliser & 112.5 & 324.3 \\
+Toshiba Hard Disk (500 GB/1 TB) & 28.6 & 221.3 \\
+Fax Machine & 40  & 197.9 \\ 
+
+\end{tabular}
+\end{table}
+
         %Appendix 3  
         \newpage
-             \section*{Appendix 3: Additional Requirements for Authorising Recyclers}
+             \section*{Appendix 3: Additional Requirements for \\ Authorising Recyclers}
            \addcontentsline{toc}{section}{Appendix 3: Additional Requirements for Authorising Recyclers}
         
-        According to the Implementation Guidelines given by CPCB for the EWM Rules, 2016, a recycling facility needs to provide the following to the SPCB:
+        According to the Implementation Guidelines given by the CPCB for the EWM Rules, 2016, a recycling facility needs to provide the following to the SPCB:
             \begin{enumerate}[noitemsep,nolistsep]
             
                        \item Details of air pollution control devices along with a diagram and the design scheme
-                        \item Details of effluent treatment plants (ETP) installed in the unit along with a diagram and the design scheme 
+                        \item Details of effluent treatment plants (ETPs) installed in the unit along with a diagram and the design scheme 
                         \item Details of storage facility separate for raw material, segregated material, dismantled parts, hazardous waste, bag filter residue/floor cleaning dust, ETP sludge, non-recyclable/non-removable components
-                             \item Membership and registration with Treatment, Storage, Disposal Facility operator authorised under HWM Rules, 2008
+                             \item Membership and registration with a Treatment, Storage, Disposal Facility operator authorised under the HWM Rules, 2008
                               \item Power of attorney/authority letter of signature to the applicant
                                \item Details of handling, dismantling/recycling/refurbishing provided at the facility for e-waste and hazardous waste		                  
                                \begin{enumerate}[noitemsep,nolistsep]
                           	 	\item Should include adequate wastewater treatment facilities and air pollution control equipment 
                     	 		 \item Provide technology for data destruction 
                       		 \end{enumerate}
-                       \item Copy of allotment letter from Municipal Corporation with details of land and building plan \\
+                       \item Copy of allotment letter from the Municipal Corporation with details of land and building plan \\
             \end{enumerate}
             
             Recyclers are also required to operate on a minimum of 500 sq. metres if their capacity is one metric tonne per day.\\
@@ -519,8 +530,8 @@
         	\item Details of pollution control systems such as ETPs
         	\item Details of occupational health and safety measures
         	\item Process flow sheet showing equipment details, inputs (raw materials) and outputs (products, by-products, waste, emissions)
-        	\item Details of end user of products or by-products
-        	\item Proof of application given to the operator of Common Hazardous and Other Wastes Treatment, Storage and Disposal Facility (CHWTSDF)
+        	\item Details of the end user of products or by-products
+        	\item Proof of application given to the operator of a Common Hazardous and Other Wastes Treatment, Storage and Disposal Facility (CHWTSDF)
         
         \end{enumerate}
         
